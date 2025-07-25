@@ -1,11 +1,12 @@
 # AI QC + Enhancement Bot
 
 This project is a full-stack application designed to improve the quality of educational question banks using a sophisticated AI pipeline. It consists of a React-based frontend and a Python FastAPI backend that leverages Google's Gemini via LangGraph to perform quality control, enhancement, and metadata extraction on submitted questions.
-<img width="1922" height="4293" alt="screencapture-localhost-5173-2025-07-24-20_12_41" src="https://github.com/user-attachments/assets/ad630c8b-10fe-4bc2-893f-f3a620475108" />
-<img width="1923" height="4628" alt="swaggerui" src="https://github.com/user-attachments/assets/576610ca-7f84-488f-802b-acf00fca92a2" />
-<img width="1312" height="721" alt="Screenshot 2025-07-24 203252" src="https://github.com/user-attachments/assets/3929a9de-2a77-4266-843b-eb1aa3c451b4" />
-<img width="1904" height="786" alt="Screenshot 2025-07-25 162729" src="https://github.com/user-attachments/assets/1a49387d-d889-41b8-ac79-ceadb9b945af" />
-<img width="1910" height="939" alt="Screenshot 2025-07-25 163251" src="https://github.com/user-attachments/assets/a7d2edf5-6531-470d-b51c-afe005043c2d" />
+
+![alt text](full.png)
+![alt text](swaggerui.png)
+![alt text](version.png)
+![alt text](csvv.png)
+![alt text](vscsv.png)
 
 ## Project Structure
 
@@ -13,8 +14,8 @@ The repository is organized into two main directories:
 
 - `frontend-react/`: Contains the modern, single-page application (SPA) that provides the user interface for interacting with the system.
 - `mathongo-ai-qc/`: Contains the robust FastAPI backend that orchestrates the multi-agent AI workflow.
-<img width="1891" height="664" alt="Screenshot 2025-07-25 141918" src="https://github.com/user-attachments/assets/0ca8fdbe-9b6d-4fc3-adf9-4c48a5f378f6" />
-<img width="1001" height="875" alt="Screenshot 2025-07-25 141609" src="https://github.com/user-attachments/assets/9b74c0bd-cf25-4308-8575-5a7c7a26635a" />
+  <img width="1891" height="664" alt="Screenshot 2025-07-25 141918" src="https://github.com/user-attachments/assets/0ca8fdbe-9b6d-4fc3-adf9-4c48a5f378f6" />
+  <img width="1001" height="875" alt="Screenshot 2025-07-25 141609" src="https://github.com/user-attachments/assets/9b74c0bd-cf25-4308-8575-5a7c7a26635a" />
 
 ## Architecture Overview
 
