@@ -1,6 +1,6 @@
 # AI QC + Enhancement Bot for Question Banks
 
-This backend system is a FastAPI application designed to process and enhance educational questions (MCQs, short-answer, etc.) using a sophisticated AI pipeline. The system leverages Google's Gemini Pro LLM, orchestrated by LangGraph, to perform a series of quality control checks, improvements, and metadata extractions. All processing is versioned, creating a complete history for each question.
+This backend system is a FastAPI application designed to process and enhance educational questions (MCQs, short-answer, etc.) using a sophisticated AI pipeline. The system leverages Google's Gemini  LLM, orchestrated by LangGraph, to perform a series of quality control checks, improvements, and metadata extractions. All processing is versioned, creating a complete history for each question.
 
 ## Core Technologies
 
