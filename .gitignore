@@ -121,11 +121,6 @@ Thumbs.db
 *.dat
 *.pkl
 
-# Image files
-*.png
-*.jpg
-*.jpeg
-*.gif
 
 # React build files
 frontend-react/build/
