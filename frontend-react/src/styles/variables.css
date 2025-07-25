@@ -1,0 +1,98 @@
+/* Variables for the color palette */
+:root {
+  /* Primary Colors - Modern Vibrant */
+  --primary: #3b82f6; /* Vivid Blue */
+  --primary-dark: #1e40af; /* Deep Blue */
+  --primary-light: #93c5fd; /* Soft Blue */
+
+  /* Accent Colors */
+  --accent: #f59e42; /* Orange accent */
+  --accent-dark: #b45309; /* Dark orange */
+
+  /* Success Colors */
+  --success: #22c55e; /* Emerald */
+  --success-dark: #166534; /* Deep Emerald */
+
+  /* Alert Colors */
+  --danger: #ef4444; /* Red */
+  --warning: #fbbf24; /* Yellow */
+  --info: #38bdf8; /* Sky Blue */
+
+  /* Neutral Colors - Softer, Modern */
+  --background: #f4f6fb; /* Soft off-white */
+  --background-dark: #e5e7eb; /* Light gray */
+  --background-accent: #e0e7ff; /* Subtle blue background */
+  --text: #22223b; /* Deep navy */
+  --text-light: #6b7280; /* Muted gray */
+  --border: #d1d5db; /* Light border */
+  --white: #ffffff;
+
+  /* Animation durations */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  background-color: var(--background-dark);
+  color: var(--text);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Common animations classes */
+.fade-in {
+  animation: fadeIn var(--transition-normal) ease-out;
+}
+
+.slide-in {
+  animation: slideIn var(--transition-normal) ease-out;
+}
+
+.scale-in {
+  animation: scaleIn var(--transition-normal) ease-out;
+}

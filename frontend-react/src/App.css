@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "./styles/variables.css";
+
+:root {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.8em;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+button {
+  border-radius: 6px;
+  border: none;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid rgba(0, 123, 255, 0.5);
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #0056b3;
+  }
+  button {
+    background-color: #007bff;
+    color: white;
+  }
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.app-container h1 {
+  color: #007bff;
+  margin-bottom: 2.5rem;
+  font-size: 2.8em;
+  letter-spacing: -0.03em;
+}
+
+.question-form {
+  background-color: #f8f9fa;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.question-form h2 {
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.question-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  min-height: 180px;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.question-form textarea:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.question-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.question-form input[type="text"]:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.question-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  font-size: 1.15rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.question-form button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.question-form button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3em;
+  color: #007bff;
+  margin: 3rem 0;
+  font-weight: 500;
+}
+
+.loading-spinner::after {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid rgba(0, 123, 255, 0.2);
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.results-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.feedback-display,
+.version-history {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.feedback-display:hover,
+.version-history:hover {
+  transform: translateY(-5px);
+}
+
+.feedback-display::before,
+.version-history::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 123, 255, 0.1);
+  pointer-events: none;
+}
+
+.feedback-display h2,
+.version-history h3 {
+  color: #007bff;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.response-card {
+  background-color: #f0f8ff;
+  border: 1px solid #cce5ff;
+  border-radius: 8px;
+  padding: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.response-card h3 {
+  color: #0056b3;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.response-card p,
+.response-card ul {
+  margin-bottom: 0.7rem;
+  line-height: 1.7;
+  font-size: 0.95em;
+}
+
+.response-card ul {
+  padding-left: 20px;
+}
+
+.response-card li {
+  margin-bottom: 5px;
+}
+
+.version-history table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.version-history th,
+.version-history td {
+  border: 1px solid #e9ecef;
+  padding: 12px;
+  text-align: left;
+}
+
+.version-history th {
+  background-color: #e9ecef;
+  color: #495057;
+  font-weight: 600;
+}
+
+.version-history tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.version-history button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.version-history button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .app-container h1 {
+    font-size: 2.2em;
+  }
+
+  .question-form {
+    padding: 1.8rem;
+  }
+
+  .question-form h2 {
+    font-size: 1.5em;
+  }
+
+  .results-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .feedback-display,
+  .version-history {
+    min-width: unset;
+    width: 100%;
+    padding: 1.8rem;
+  }
+}

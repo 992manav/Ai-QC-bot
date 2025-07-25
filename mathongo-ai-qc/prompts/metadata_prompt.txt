@@ -1,0 +1,15 @@
+Extract the following metadata from the question below: topic, subtopic, Bloom’s level, and difficulty.
+
+Return a JSON object with the following keys:
+- topic (str): The main topic of the question.
+- subtopic (str): The specific subtopic within the main topic.
+- blooms_level (str): The Bloom's Taxonomy level (e.g., "Remember", "Understand", "Apply", "Analyze", "Evaluate", "Create").
+- difficulty (str): The difficulty level (e.g., "Easy", "Medium", "Hard").
+
+Instructions:
+Analyze the question text deeply and objectively based solely on the question content.
+Provide precise, concise, and contextually accurate metadata.
+Do NOT include any explanation, additional text, or formatting outside the valid JSON object.
+
+Question:
+{question_text}

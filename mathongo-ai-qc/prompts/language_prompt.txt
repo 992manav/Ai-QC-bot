@@ -1,0 +1,16 @@
+Analyze the question below for language, grammar, clarity, and ambiguity issues.
+
+Return ONLY a valid JSON object (no markdown, no code block, no explanation outside JSON) with the following keys:
+- "issues_found" (bool): True if any language issues are found, False otherwise.
+- "feedback" (list of str): A list of specific language/grammar/clarity issues. Ensure no markdown formatting (e.g., **, *, #) is used within the string values.
+- "explanation" (str): A detailed explanation of the language assessment. Ensure no markdown formatting (e.g., **, *, #) is used within the string values.
+
+Guidelines:
+- Focus on grammatical correctness, proper word usage, sentence structure, punctuation, and clarity of meaning.
+- Detect ambiguous or confusing language and explain why it affects understanding.
+- Use professional, precise, and constructive language.
+- Provide feedback that would help an educator or content creator improve the question.
+- Ensure the JSON output is strictly parsable and contains no additional commentary or formatting outside the JSON object.
+
+Question:
+{question_text}
