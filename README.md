@@ -14,8 +14,8 @@ The repository is organized into two main directories:
 
 - `frontend-react/`: Contains the modern, single-page application (SPA) that provides the user interface for interacting with the system.
 - `mathongo-ai-qc/`: Contains the robust FastAPI backend that orchestrates the multi-agent AI workflow.
-  <img width="1891" height="664" alt="Screenshot 2025-07-25 141918" src="https://github.com/user-attachments/assets/0ca8fdbe-9b6d-4fc3-adf9-4c48a5f378f6" />
-  <img width="1001" height="875" alt="Screenshot 2025-07-25 141609" src="https://github.com/user-attachments/assets/9b74c0bd-cf25-4308-8575-5a7c7a26635a" />
+  ![alt text](image1.png)
+  ![alt text](image2.png)
 
 ## Architecture Overview
 
